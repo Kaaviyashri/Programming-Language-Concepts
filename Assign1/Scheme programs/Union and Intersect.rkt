@@ -1,0 +1,16 @@
+#lang scheme
+(define (union s1 s2)
+  (cond ((null? s1) s2)
+        ((member (car s1) s2) (union (cdr s1) s2))
+        (else (cons (car s1) (union (cdr s1) s2)))))
+(display (union '(1 2 3) '(3 2 1)))(newline)
+(display (union '(1 2 3) '(3 4 5)))(newline)
+(display (union '(a b c) '(3 2 1)))(newline)
+
+(define (intersect s1 s2)
+  (cond ((null? s1) '())
+        ((member (car s1) s2) (cons (car s1) (intersect (cdr s1) s2)))
+        (else (intersect (cdr s1) s2))))
+(display (intersect '(1 2 3) '(3 2 1)))(newline)
+(display (intersect '(1 2 3) '(4 5 6)))(newline)
+(display (intersect '(1 2 3) '(2 3 4 5 6)))
