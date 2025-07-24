@@ -7,5 +7,5 @@
 ## 📂 Contents
 - `assignment1/`: Scheme code and output
 - `assignment2/`: NFA, DFA and Regular Expression - Syntax and Semantics concepts
-- `final-project/`: Haskell code and output
+- `assignment3/`: Haskell code and output
 
